@@ -1,0 +1,14 @@
+INSERT INTO guias.permisos(idpermisos, nombre_permiso, descripcion_permiso) VALUES (1, 'T', 'CONTROL TOTAL');
+INSERT INTO guias.permisos(idpermisos, nombre_permiso, descripcion_permiso) VALUES (2, 'E', 'ESCRITURA');
+INSERT INTO guias.permisos(idpermisos, nombre_permiso, descripcion_permiso) VALUES (3, 'L', 'LECTURA');
+INSERT INTO guias.permisos(idpermisos, nombre_permiso, descripcion_permiso) VALUES (4, 'M', 'MODIFICAR');
+INSERT INTO guias.roles(idroles, nombre_rol, descripcion_rol) VALUES (1, 'SUPERADMINISTRADOR', 'CONTROL EN TODO');
+INSERT INTO guias.roles(idroles, nombre_rol, descripcion_rol) VALUES (2, 'ADMINISTRADOR', 'CONTROL BASICO');
+INSERT INTO guias.roles(idroles, nombre_rol, descripcion_rol) VALUES (3, 'MIEMBRO', 'SOLO LECTURA');
+INSERT INTO guias.roles_permisos(idroles, idpermisos) VALUES (1, 1);
+INSERT INTO guias.roles_permisos(idroles, idpermisos) VALUES (2, 2);
+INSERT INTO guias.roles_permisos(idroles, idpermisos) VALUES (2, 3);
+INSERT INTO guias.roles_permisos(idroles, idpermisos) VALUES (3, 3);
+INSERT INTO guias.roles_permisos(idroles, idpermisos) VALUES (2, 4);
+INSERT INTO guias.usuarios(idusuarios, login, password, estado) VALUES (1, 'ADMIN', 'ADMIN', 1);
+INSERT INTO guias.usuarios_roles(idusuarios, idroles) VALUES (1, 1);
